@@ -13,7 +13,7 @@ jobs:
     steps:
       # traditionally you would build your code here and generate an artifact
       - name: Create artifact
-        run:  echo "onion, tomato, jalapeno, cilantro, lime, salt" > salsa.txt
+        run:  echo "onion, tomato, jalapeno, cilantro, lime, salt and MANY CATS" > salsa.txt
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -36,4 +36,4 @@ jobs:
       - name: Upload provenance
         uses: actions/upload-artifact@v2
         with:
-          path: buildVK.provenance
+          path: build.provenance
