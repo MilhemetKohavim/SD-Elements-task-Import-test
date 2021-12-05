@@ -1,4 +1,4 @@
-name: Create a sample provenance vika
+name: Create a sample provenance VictoriaK
 
 on:
   #workflow_dispatch:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build artifact vika
+    name: Build artifact VictoriaK
     runs-on: ubuntu-latest
     steps:
       # traditionally you would build your code here and generate an artifact
@@ -36,4 +36,4 @@ jobs:
       - name: Upload provenance
         uses: actions/upload-artifact@v2
         with:
-          path: build.provenance
+          path: build.provenanceVK
