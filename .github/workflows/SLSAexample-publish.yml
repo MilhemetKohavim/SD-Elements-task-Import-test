@@ -1,11 +1,11 @@
-name: Create a sample provenance
+name: Create a sample provenance vika
 
 on:
   workflow_dispatch:
 
 jobs:
   build:
-    name: Build artifact
+    name: Build artifact vika
     runs-on: ubuntu-latest
     steps:
       # traditionally you would build your code here and generate an artifact
