@@ -31,12 +31,12 @@ jobs:
 
       - name: Build an image from Dockerfile
         run: |
-          docker build -t https://hub.docker.com/layers/library/busybox/unstable-musl/images/sha256-f344ddc7dc543c373389a9172459ef18b0db83fdd50fa195af1b08a50e667fb3 .
+          docker build -t my-nginx-image https://github.com/nginxinc/docker-nginx.git
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
         with:
-          image-ref: 'https://hub.docker.com/layers/library/busybox/unstable-musl/images/sha256-f344ddc7dc543c373389a9172459ef18b0db83fdd50fa195af1b08a50e667fb3'
+          image-ref: my-nginx-image
           format: 'template'
           template: '@/contrib/sarif.tpl'
           output: 'trivy-results.sarif'
