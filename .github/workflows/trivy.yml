@@ -31,7 +31,9 @@ jobs:
 
       - name: Build an image from Dockerfile
         run: |
-          docker build -t my-nginx-image https://github.com/nginxinc/docker-nginx.git
+         
+          docker build -t my-nginx-image https://github.com/nginxinc/docker-nginx.git#mainline/debian
+
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
